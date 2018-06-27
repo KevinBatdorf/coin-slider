@@ -127,10 +127,11 @@
 		};
 
 		var transitionCall = function (el) {
-
-			clearInterval(interval[el.id]);
-			var delay = params[el.id].delay + params[el.id].spw * params[el.id].sph * params[el.id].sDelay;
-			interval[el.id] = setInterval(function() { transition(el);  }, delay);
+			if (params[el.id].autoplay === true) {
+				clearInterval(interval[el.id]);
+				var delay = params[el.id].delay + params[el.id].spw * params[el.id].sph * params[el.id].sDelay;
+				interval[el.id] = setInterval(function() { transition(el);  }, delay);
+			}
 
 		};
 
@@ -531,7 +532,8 @@
 		navigation: true, // show/hide prev, next and buttons
 		showNavigationPrevNext: true,
 		showNavigationButtons: true,
-		navigationPrevNextAlwaysShown: false
+		navigationPrevNextAlwaysShown: false,
+		autoplay: false
 	};
 
 })(jQuery);
