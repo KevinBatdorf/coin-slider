@@ -1,10 +1,4 @@
 {
-    "name": "kevin/coin-slider",
+    "name": "updraftplus/coin-slider",
     "description": "CoinSlider fork used by MetaSlider",
-    "authors": [
-        {
-            "name": "Kevin Batdorf",
-            "email": "kbat82@gmail.com"
-        }
-    ]
 }
